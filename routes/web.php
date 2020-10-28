@@ -11,8 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PageController@index');
 
 // Route::apiResource('api/posts', 'Api\PostController');
+
+
+Route::middleware('auth')
+  ->resource('posts', 'Backend\PostController')
+  ->only(['index']);
+
+Route::get('/home', 'Backend\HomeController@index')->name('home');
+
+Auth::routes();

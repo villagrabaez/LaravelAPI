@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Welcome</div>
+                <div class="card-header">Prueba de API - Posts</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -20,14 +20,15 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Post</th>
-                                    <th>&nbsp;</th>
+                                    <th colspan="2">&nbsp;</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr v-for="post in posts">
                                     <td v-text="post.id"></td>
                                     <td v-text="post.title"></td>
-                                    <td v-text="post.created"></td>
+                                    <td v-text="post.created_at"></td>
+                                    <td v-text="post.updated_at"></td>
                                 </tr>
                             </tbody>
                         </table>
