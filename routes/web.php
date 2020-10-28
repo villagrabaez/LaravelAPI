@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::apiResource('api/posts', 'Api\PostController');
+// Route::apiResource('api/posts', 'Api\PostController');

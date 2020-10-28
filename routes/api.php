@@ -15,4 +15,4 @@ use Illuminate\Http\Request;
 
 // Una API no necesita la ruta para crear y editar recursos. FUNDAMENTOS API
 // Route::resource('posts', 'Api\PostController')->except(['create', 'edit']);
-// Route::apiResource('posts', 'Api\PostController');
+Route::apiResource('posts', 'Api\PostController');
