@@ -13,6 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Una API no necesita la ruta para crear y editar recursos. FUNDAMENTOS API
+// Route::resource('posts', 'Api\PostController')->except(['create', 'edit']);
+// Route::apiResource('posts', 'Api\PostController');
