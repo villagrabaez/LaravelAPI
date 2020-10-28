@@ -56,7 +56,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return response()->json(new PostResources($post), 200);
+        return response()->json(new PostResources($post));
         /*
             return [
                 'id'        => $post->id,
@@ -77,7 +77,7 @@ class PostController extends Controller
     {
         $post->update($request->all());
 
-        return response()->json(new PostResources($post), 200);
+        return response()->json(new PostResources($post));
     }
 
     /**
